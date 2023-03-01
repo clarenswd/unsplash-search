@@ -36,6 +36,7 @@ export const searchSelector = selector({
         alt_description: result.alt_description,
         url: result.urls.small,
         likes: result.likes,
+        blur_hash: result.blur_hash,
       };
     });
   },
