@@ -7,8 +7,8 @@ const useUnsplash = () => {
   const [results, setResults] = useRecoilState(searchResults);
 
   const executeSearch = useCallback(
-    async (query: string) => {
-      const resp = await unsplashService.search(query);
+    async (query: string, page?: number) => {
+      const resp = await unsplashService.search(query, page);
       setResults(resp);
     },
     [setResults]

@@ -1,5 +1,5 @@
 const styles = {
-  container: { overflowY: "auto" },
+  container: { overflowY: "auto", marginTop: "10px" },
   imageList: {
     columnCount: {
       xs: "3 !important",

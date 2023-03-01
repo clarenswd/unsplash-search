@@ -5,10 +5,10 @@ const unSplashApi = createApi({
   accessKey: "m0RyTopMcv1pjn-UZHJWYeD2EjACeKKvJS2XEJ8V0qE",
 });
 
-const search = async (query: string): Promise<SearchResult> => {
+const search = async (query: string, page?: number): Promise<SearchResult> => {
   const resp = await unSplashApi.search.getPhotos({
     query,
-    page: 1,
+    page: page ?? 1,
     perPage: 20,
     orientation: "portrait",
   });

@@ -16,6 +16,15 @@ export const resultsSelector = selector({
   },
 });
 
+export const pagesSelector = selector({
+  key: "pagesSelector",
+  get: ({ get }) => {
+    const searchResp = get(searchResults);
+    const { total_pages = 0 } = searchResp;
+    return total_pages;
+  },
+});
+
 export const searchSelector = selector({
   key: "searchSelector",
   get: ({ get }) => {
