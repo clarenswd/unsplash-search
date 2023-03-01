@@ -1,19 +1,18 @@
-import { useEffect } from "react";
-import unSplashApi from "../services/unsplash";
+import { useCallback } from "react";
+import { useRecoilState } from "recoil";
+import { searchResults } from "../atoms/searchResults";
+import unsplashSrv from "../services/unsplash";
 
 const useUnsplash = () => {
-  useEffect(() => {
-    const searchPhotos = async (query: string = "cat") => {
-      const resp = await unSplashApi.search.getPhotos({
-        query,
-        page: 1,
-        perPage: 10,
-        color: "green",
-        orientation: "portrait",
-      });
-      console.log(resp);
-    };
-    searchPhotos("dog");
-  }, []);
+  const [results, setResults] = useRecoilState(searchResults);
+
+  const executeSearch = useCallback(
+    async (query: string) => {
+      const resp = await unsplashSrv.search(query);
+      setResults(resp);
+    },
+    [setResults]
+  );
+  return { results, executeSearch };
 };
 export default useUnsplash;

@@ -1,13 +1,16 @@
 import { Box, TextField } from "@mui/material";
+import useSearchInput from "./useSearchInput";
 
 const SearchInput = () => {
+  const { text, onChange, onPressedEnter } = useSearchInput();
+
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "center",
-        border: "1px solid blue",
         "& .MuiTextField-root": { m: 1, width: "55ch" },
+        // border: "1px solid blue",
       }}
     >
       <TextField
@@ -15,6 +18,9 @@ const SearchInput = () => {
         label="Search"
         variant="outlined"
         size="medium"
+        value={text}
+        onChange={onChange}
+        onKeyDown={onPressedEnter}
       />
     </Box>
   );

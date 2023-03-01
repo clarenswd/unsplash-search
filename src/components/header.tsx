@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 const Header = () => {
   return (
-    <Box sx={{ border: "1px solid red" }}>
+    <Box sx={{}}>
       <Typography variant="h4" component="h1" gutterBottom>
         Search
       </Typography>

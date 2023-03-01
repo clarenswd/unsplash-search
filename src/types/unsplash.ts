@@ -18,6 +18,7 @@ export interface Result {
   current_user_collections: any[];
   urls: Urls;
   links: Links2;
+  alt_description?: string;
 }
 
 export interface User {
