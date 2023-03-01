@@ -1,17 +1,12 @@
 import { Box, TextField } from "@mui/material";
+import styles from "./SearchInput.styles";
 import useSearchInput from "./useSearchInput";
 
 const SearchInput = () => {
   const { text, onChange, onPressedEnter } = useSearchInput();
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        "& .MuiTextField-root": { m: 1, width: "55ch" },
-      }}
-    >
+    <Box sx={styles.container}>
       <TextField
         id="outlined-basic"
         label="Search"

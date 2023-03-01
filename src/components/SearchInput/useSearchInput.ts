@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useRecoilState } from "recoil";
 import searchState from "../../atoms/search";
-import useUnsplash from "../../hooks/useUnsplash";
+import useUnsplash from "../../services/useUnsplash";
 
 const useSearchInput = () => {
   const { executeSearch } = useUnsplash();
