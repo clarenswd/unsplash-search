@@ -10,7 +10,6 @@ const SearchInput = () => {
         display: "flex",
         justifyContent: "center",
         "& .MuiTextField-root": { m: 1, width: "55ch" },
-        // border: "1px solid blue",
       }}
     >
       <TextField
