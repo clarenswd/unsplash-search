@@ -1,6 +1,7 @@
-import { Box, TextField } from "@mui/material";
+import { Box, InputAdornment, TextField } from "@mui/material";
 import styles from "./SearchInput.styles";
 import useSearchInput from "./useSearchInput";
+import SearchIcon from "@mui/icons-material/Search";
 
 const SearchInput = () => {
   const { text, onChange, onPressedEnter } = useSearchInput();
@@ -9,9 +10,16 @@ const SearchInput = () => {
     <Box sx={styles.container}>
       <TextField
         id="outlined-basic"
-        label="Search"
+        label="Search something cool"
         variant="outlined"
         size="medium"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
         value={text}
         onChange={onChange}
         onKeyDown={onPressedEnter}

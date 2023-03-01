@@ -1,9 +1,10 @@
 import { SearchResult } from "../types/unsplash";
 import { atom, selector } from "recoil";
+import demoPayload from "../assets/demoPayload";
 
 export const searchResults = atom({
   key: "searchResults",
-  default: {} as SearchResult,
+  default: demoPayload as SearchResult,
 });
 
 export const resultsSelector = selector({
