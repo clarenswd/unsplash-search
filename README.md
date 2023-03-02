@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+# SnapSearch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Unsplash client side search. This is a simple client side search for the Unsplash API. It uses the Unsplash API to search for images and display them in a grid.
 
-## Available Scripts
+# Main Dependencies
 
-In the project directory, you can run:
+- Material UI
+- Recoil - for state management.
+- Blurhash - to render Blured images
+- React
 
-### `npm start`
+# Things I would have done differently
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add more unit test, I added some for the Unsplash service file, `src/services/useUnsplash.test.tsx`.
+- Add a recommendation section for the keywords and populate them using openAI. I tried this approach, just to add a woW effect, but those requests add a lot of time to the search.
+- Refactor the image grid, make transitions smoother and perhaps a nicer styling.
+- Add error handling for the API calls and what not.

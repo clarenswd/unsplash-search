@@ -11,7 +11,7 @@ export const resultsSelector = selector({
   key: "resultsSelector",
   get: ({ get }) => {
     const searchResp = get(searchResults);
-    const { results = [] } = searchResp;
+    const { results = [] } = searchResp || {};
     return results;
   },
 });
@@ -20,7 +20,7 @@ export const pagesSelector = selector({
   key: "pagesSelector",
   get: ({ get }) => {
     const searchResp = get(searchResults);
-    const { total_pages = 0, total = 0 } = searchResp;
+    const { total_pages = 0, total = 0 } = searchResp || {};
     return { total_pages, total };
   },
 });

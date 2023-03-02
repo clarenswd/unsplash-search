@@ -48,5 +48,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.21.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }

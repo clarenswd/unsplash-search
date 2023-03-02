@@ -1,8 +1,10 @@
 import { createApi } from "unsplash-js";
 import { SearchResult } from "../types/unsplash";
 
+const unsplashApiKey = process.env.REACT_APP_UNSPLASH_KEY || "";
+
 const unSplashApi = createApi({
-  accessKey: "m0RyTopMcv1pjn-UZHJWYeD2EjACeKKvJS2XEJ8V0qE",
+  accessKey: unsplashApiKey,
 });
 
 const search = async (query: string, page?: number): Promise<SearchResult> => {
