@@ -10,7 +10,7 @@ const SearchInput = () => {
     <Box sx={styles.container}>
       <TextField
         id="outlined-basic"
-        label="Search something cool"
+        label="Some ideas, Peru, small cats, funny dogs..."
         variant="outlined"
         size="medium"
         InputProps={{

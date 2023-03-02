@@ -1,9 +1,16 @@
 const styles = {
   resultsInfo: {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "flex-end",
+    "> .MuiTypography-paragraph": { marginBottom: "0px" },
   },
-  container: { overflowY: "auto", overflowX: "hidden", marginTop: "10px" },
+  container: {
+    overflowY: "auto",
+    overflowX: "hidden",
+    "> .MuiImageList-masonry": {
+      marginTop: "5px",
+    },
+  },
   paginationContainer: {
     display: "flex",
     justifyContent: "center",

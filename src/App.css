@@ -3,3 +3,11 @@ Why this global CSS file?
 In the past I have worked with designers that are confident with plain CSS. 
 Providing a global CSS file facilitated them to style the components.
 **/
+
+.MuiInputBase-root.MuiOutlinedInput-root {
+  border-radius: 50px;
+}
+
+body {
+  background-color: #f5f5f5;
+}

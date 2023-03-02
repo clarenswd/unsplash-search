@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useRecoilValue } from "recoil";
 import { previousSearchState } from "../../atoms/search";
 import { pagesSelector } from "../../atoms/searchResults";
@@ -9,9 +10,9 @@ const ResultsHeader = () => {
 
   return (
     <>
-      <p>
+      <Typography paragraph={true}>
         {total_pages} results for "{searchText}"
-      </p>
+      </Typography>
     </>
   );
 };

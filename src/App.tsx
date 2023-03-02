@@ -5,6 +5,7 @@ import { Grid, ThemeProvider } from "@mui/material";
 import { RecoilRoot } from "recoil";
 import { SearchInput, SearchResults, Header } from "./components";
 import appTheme from "./theme/appTheme";
+import "./App.css";
 
 function App() {
   return (
