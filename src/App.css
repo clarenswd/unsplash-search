@@ -1,3 +1,5 @@
-.MuiImageListItem-root:hover {
-  border: 2px solid red;
-}
+/**
+Why this global CSS file?
+In the past I have worked with designers that are confident with plain CSS. 
+Providing a global CSS file facilitated them to style the components.
+**/

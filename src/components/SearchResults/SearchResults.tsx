@@ -1,17 +1,21 @@
 import { Box, Fade, ImageList, ImageListItem } from "@mui/material";
 import { useRecoilValue } from "recoil";
 import { searchSelector } from "../../atoms/searchResults";
-import styles from "./SearchResults.styles";
-import Pagination from "../Pagination";
 
+import styles from "./SearchResults.styles";
+
+import Pagination from "../Pagination";
 import Image from "./Image";
+import ResultsHeader from "../ResultsHeader";
 
 const SearchResults = () => {
   const resultsSelector = useRecoilValue(searchSelector);
 
   return (
     <>
-      <Pagination />
+      <Box sx={styles.resultsInfo}>
+        <ResultsHeader />
+      </Box>
       <Box sx={styles.container}>
         <ImageList variant="masonry" gap={0} sx={styles.imageList}>
           {resultsSelector.map((item, index) => (
@@ -26,6 +30,9 @@ const SearchResults = () => {
             </Fade>
           ))}
         </ImageList>
+      </Box>
+      <Box sx={styles.paginationContainer}>
+        <Pagination />
       </Box>
     </>
   );

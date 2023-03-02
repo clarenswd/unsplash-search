@@ -1,11 +1,13 @@
 import { useCallback } from "react";
 import { useRecoilState } from "recoil";
-import searchState from "../../atoms/search";
+import { previousSearchState, searchState } from "../../atoms/search";
 import useUnsplash from "../../services/useUnsplash";
 
 const useSearchInput = () => {
   const { executeSearch } = useUnsplash();
   const [text, setText] = useRecoilState(searchState);
+  const [previousSearch, setPreviousSearch] =
+    useRecoilState(previousSearchState);
 
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,9 +20,10 @@ const useSearchInput = () => {
     (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === "Enter") {
         executeSearch(text);
+        setPreviousSearch([...previousSearch, text]);
       }
     },
-    [text, executeSearch]
+    [text, previousSearch, executeSearch, setPreviousSearch]
   );
 
   return { text, onChange, onPressedEnter };

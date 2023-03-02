@@ -11,20 +11,20 @@ function App() {
     <ThemeProvider theme={appTheme}>
       <RecoilRoot>
         <Grid container spacing={2}>
-          <Grid item xs={12} lg={12}>
-            <Container maxWidth="lg">
+          <Grid item xs={12}>
+            <Container maxWidth="xl">
               <Header />
             </Container>
           </Grid>
 
           <Grid item xs={12}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
               <SearchInput />
             </Container>
           </Grid>
 
           <Grid item xs={12}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
               <SearchResults />
             </Container>
           </Grid>

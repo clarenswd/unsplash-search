@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <Box sx={{}}>
       <Typography variant="h4" component="h1" gutterBottom>
-        Search Unsplash
+        SnapSearch
       </Typography>
     </Box>
   );

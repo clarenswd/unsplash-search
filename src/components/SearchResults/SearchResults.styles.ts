@@ -1,9 +1,18 @@
 const styles = {
-  container: { overflowY: "auto", marginTop: "10px" },
+  resultsInfo: {
+    display: "flex",
+    justifyContent: "flex-start",
+  },
+  container: { overflowY: "auto", overflowX: "hidden", marginTop: "10px" },
+  paginationContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
   imageList: {
+    overflowX: "hidden",
     columnCount: {
-      xs: "3 !important",
-      sm: "4 !important",
+      xs: "2 !important",
+      sm: "5 !important",
     },
   },
 };

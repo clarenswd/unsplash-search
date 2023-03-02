@@ -1,8 +1,13 @@
 import { atom } from "recoil";
 
-const searchState = atom({
+const defaultSearchText = "Peru";
+
+export const searchState = atom({
   key: "searchState",
-  default: "Peru",
+  default: defaultSearchText,
 });
 
-export default searchState;
+export const previousSearchState = atom({
+  key: "previousSearchState",
+  default: [defaultSearchText],
+});

@@ -2,10 +2,10 @@ import { Pagination as MuiPagination } from "@mui/material";
 import usePagination from "./usePagination";
 
 const Pagination = () => {
-  const { pages, changePage } = usePagination();
+  const { total_pages, changePage } = usePagination();
   return (
     <MuiPagination
-      count={pages}
+      count={total_pages}
       variant="outlined"
       color="primary"
       onChange={(event: React.ChangeEvent<unknown>, page: number) => {
